@@ -7,6 +7,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - id: deploy
+        uses: bitovi/github-actions-deploy-commons@main 
+        with:
+          aws_access_key_id: fefef
+          aws_secret_access_key: fefef
+          aws_default_region: us-east-1
+
       - uses: ClydeDz/custom-githubaction-poc@main
         with:
           passparamone: 'Mona'
