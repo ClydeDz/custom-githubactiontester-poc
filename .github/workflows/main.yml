@@ -10,7 +10,7 @@ jobs:
       - uses: ClydeDz/custom-githubaction-poc@main
         with:
           passparamone: 'Mona'
-          inputDir: 'public'
+          inputDir: 'public/*'
       
       - name: Upload files
         uses: actions/upload-artifact@v3
