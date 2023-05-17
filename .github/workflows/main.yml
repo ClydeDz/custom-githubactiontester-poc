@@ -7,10 +7,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: ClydeDz/custom-githubaction-poc@main
+      - name: something
+        uses: ClydeDz/custom-githubaction-poc@main
         with:
-          passparamone: 'Mona'
-          inputDir: 'public/*'
+          inputDirectory: 'public/*'
+          outputDirectory: 'dist'
+          jpgCompressionQuality: 50
       
       - name: Upload files
         uses: actions/upload-artifact@v3
