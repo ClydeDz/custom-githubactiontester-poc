@@ -11,7 +11,7 @@ jobs:
         uses: clydedz/compress-images@main
         with:
           input-directory: public
-          png-compression-quality: 2
+          gif-compression-quality: 5
       
       - name: Upload files
         uses: actions/upload-artifact@v3
