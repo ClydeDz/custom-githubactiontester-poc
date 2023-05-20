@@ -7,8 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: compress
-        uses: clydedz/compress-images@v1
+      - name: Compress Images
+        uses: ClydeDz/compress-images@v1.0.0
         with:
           input-directory: public
       
