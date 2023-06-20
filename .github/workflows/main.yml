@@ -11,6 +11,12 @@ jobs:
         uses: ClydeDz/compress-images@v1
         with:
           input-directory: public
+          
+      - name: Compress Images Take Two
+        uses: ClydeDz/compress-images@v1
+        with:
+          input-directory: public
+          output-directory: public/two
       
       - name: Upload files
         uses: actions/upload-artifact@v3
