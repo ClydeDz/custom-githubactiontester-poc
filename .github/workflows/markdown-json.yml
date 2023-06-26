@@ -13,6 +13,12 @@ jobs:
         uses: ClydeDz/markdown-to-json@main
         with:
           settings-json-file: markdown/portfolio.json
+
+      - name: Convert markdown to json cta
+        uses: ClydeDz/markdown-to-json@main
+        with:
+          settings-json-file: markdown/cta.json
+          skip-installation: true
       
       - name: Upload files
         uses: actions/upload-artifact@v3
