@@ -1,21 +1,24 @@
+name: Compress image tester
+
 on: [workflow_dispatch]
 
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: Hello world
+    name: Compress files
     steps:
       - uses: actions/checkout@v3
 
       - name: Compress Images
         uses: ClydeDz/compress-images@v1
         with:
-          input-directory: public
+          input-directory: images
+          # here `output-directory` is dist
           
       - name: Compress Images Take Two
         uses: ClydeDz/compress-images@v1
         with:
-          input-directory: public
+          input-directory: images
           output-directory: public/two
       
       - name: Upload files

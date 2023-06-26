@@ -1,0 +1,9 @@
+{
+  "name": "portfolio",
+  "cwd": "./",
+  "src": "markdown/portfolio/",
+  "filePattern": "**/*.md",
+  "dist": "public/markdown-to-json/portfolio.json",
+  "metadata": false,
+  "deterministicOrder": true
+}

@@ -1,0 +1,20 @@
+name: Markdown to JSON tester
+
+on: [workflow_dispatch]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Convert files
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Convert markdown to json portfolio
+        uses: ClydeDz/markdown-to-json@main
+        with:
+          settings-json-file: markdown/portfolio.json
+      
+      - name: Upload files
+        uses: actions/upload-artifact@v3
+        with:
+          path: ./public/markdown-to-json 
