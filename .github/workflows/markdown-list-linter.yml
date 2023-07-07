@@ -1,0 +1,17 @@
+name: Markdown list linter tester
+
+on: [workflow_dispatch]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Markdown list linter
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Lint markdown lists
+        uses: ClydeDz/markdown-list-linter@main
+        with:
+          file: markdown-lists/valid_file.md
+      
+      - run: echo Step after linting
