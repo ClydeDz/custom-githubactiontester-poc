@@ -13,5 +13,10 @@ jobs:
         uses: ClydeDz/markdown-list-linter@main
         with:
           file: markdown-lists/valid_file.md
+
+      - name: Lint markdown lists
+        uses: ClydeDz/markdown-list-linter@main
+        with:
+          file: markdown-lists/unordered_lists_and_headings.md
       
       - run: echo Step after linting
