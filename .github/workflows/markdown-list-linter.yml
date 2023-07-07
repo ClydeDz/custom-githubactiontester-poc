@@ -9,14 +9,20 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Lint markdown lists
+      - id: lint1
+        name: Lint markdown lists
         uses: ClydeDz/markdown-list-linter@main
         with:
           file: markdown-lists/valid_file.md
 
-      - name: Lint markdown lists
+      - id: lint2
+        name: Lint markdown lists
         uses: ClydeDz/markdown-list-linter@main
         with:
           file: markdown-lists/unordered_lists_and_headings.md
       
+      - run: echo ${{ steps.lint1.outputs.summary }}
+      
+      - run: echo ${{ steps.lint2.outputs.summary }}
+
       - run: echo Step after linting
