@@ -14,14 +14,16 @@ jobs:
         uses: ClydeDz/markdown-list-linter@main
         with:
           file: markdown-lists/valid_file.md
+          fail-on-error: false
+      
+      - run: echo ${{ steps.lint1.outputs.summary }}
 
       - id: lint2
         name: Lint markdown lists
         uses: ClydeDz/markdown-list-linter@main
         with:
           file: markdown-lists/unordered_lists_and_headings.md
-      
-      - run: echo ${{ steps.lint1.outputs.summary }}
+          fail-on-error: false   
       
       - run: echo ${{ steps.lint2.outputs.summary }}
 
